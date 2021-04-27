@@ -20,7 +20,7 @@ public class Land {
         System.out.println(name+"发现水井中有"+leftWater+"升水");
         int peopleNumber=zhaoZhuang.getPeopleNumber();
         System.out.println("赵庄的人口："+peopleNumber);
-        peopleNumber=Village.getPeopleNumber();
+        peopleNumber=maJiaHeZhi.getPeopleNumber();
         System.out.println("马家河子的人口："+peopleNumber);
     }
 }
