@@ -3,6 +3,11 @@ package practice;
 abstract class Employee{
     public abstract double earnings();
 }
+class DayWorker extends Employee{
+    public double earnings() {
+        return 365*100;
+    }
+}
 class YearWorker extends Employee{
     public double earnings() {
         return 12000;
@@ -39,11 +44,13 @@ public class CompanySalary{
     public static void main (String args[]){
         Employee [] employee=new Employee[29];
         for (int i=0;i<employee.length;i++){
-            if(i%3==0)
+            if(i%4==0)
                 employee[i]=new WeekWorker();
-            else if(i%3==1)
+            else if(i%4==1)
                 employee[i]=new MonthWorker();
-            else if (i%3==2)
+            else if (i%4==2)
+                employee[i]=new DayWorker();
+            else if (i%4==3)
                 employee[i]=new YearWorker();
         }
         Company company=new Company(employee);
